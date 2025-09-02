@@ -13,9 +13,9 @@ A simple browser extension that lets you control your browser's proxy settings w
 ## Installation
 
 1. Download the extension files or clone this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer Mode" in the top-right corner
-4. Click "Load Unpacked" and select the folder containing the extension
+2. Open FireFox and go to `about:debugging#/runtime/this-firefox`
+3. Click "Load Temporary Add-on" 
+4. In the chosen folder select the manifest.json. 
 5. The extension icon will appear in your browser toolbar
 
 ## How to Use
