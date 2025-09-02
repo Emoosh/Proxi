@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Burp Proxy Switch</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h3>Proxi</h3>
+
+    <!-- Step 1: Default proxy notice -->
+    <div id="step1" class="step active">
+      <p>You are using default proxy setting:</p>
+      <p>Host: 127.0.0.1</p>
+      <p>Port: 8080</p>
+      <button id="accept-default">Accept</button>
+      <button id="configure">Configure</button>
+    </div>
+
+    <!-- Step 2: Configuration options -->
+    <div id="step2" class="step">
+      <p>Configure your proxy settings:</p>
+      <div class="form-group">
+        <label for="host">Host:</label>
+        <input type="text" id="host" value="127.0.0.1" />
+      </div>
+      <div class="form-group">
+        <label for="port">Port:</label>
+        <input type="number" id="port" value="8080" />
+      </div>
+      <button id="save-config">Save</button>
+      <button id="back-to-step1">Back</button>
+    </div>
+
+    <!-- Step 3: Final controls after setup -->
+    <div id="step3" class="step">
+      <h3>Proxy Control Panel</h3>
+      <button id="enable">Enable Proxy</button>
+      <button id="disable">Disable Proxy</button>
+      <button id="reconfigure">Reconfigure Proxy</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

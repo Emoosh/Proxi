@@ -1,0 +1,63 @@
+I wrote this proxy because,
+
+I wonder if i can ? 
+
+The main purpose is, using burpsuite with firefox(chromium) with a proxy.
+
+
+-----------------
+To intercept HTTP requests, use the webRequest API. This API enables you to add listeners for various stages of making an HTTP request. In the listeners, you can:
+
+    Get access to request headers and bodies and response headers.
+    Cancel and redirect requests.
+    Modify request and response headers.
+    
+You use onBeforeRequest to call the logURL() function just before starting the request. The logURL() function grabs the URL of the request from the event object and logs it to the browser console. The {urls: ["<all_urls>"]} pattern means you intercept HTTP requests to all URLs.
+
+
+
+TO INSTALL EXTENSION LOCALLY
+
+To install an extension temporarily:
+
+    open Firefox
+    enter "about:debugging" in the URL bar
+    click "This Firefox"
+    click "Load Temporary Add-on"
+    open the extension's directory and select any file inside the extension,
+    or select the packaged extension (.zip file).
+
+The extension installs and remains installed until you remove it or restart Firefox.
+
+about:debugging#/runtime/this-firefox
+
+
+Getting started with web-ext
+web-ext is a command-line tool designed to speed up and simplify development. This article explains how to install and use web-ext.
+https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
+
+Web Extension yaparken belli bir dosya yapısı var uyulması gereken,
+
+my-proxy-extension/
+│── manifest.json -> Eklentinin yetkilerini ve kullanacağı dosyaları belirliyorsun. (f.e, background.js)
+-> Biz burada proxy ve storage permissionlarını almalıyız.
+  "permissions": [
+    "proxy",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+  
+│── background.js -> Proxy ayarlarının yönetildiği yer.
+│── popup.html -> Kullanıcıların butonlar aracılığıyla proxy açıp kapamasını sağlayan şey.
+│── popup.js -> Butonlar ile (html) background.js arasında ilişki kuran yapı.
+
+
+
+
+----------------------------------------------------------------------------------------------------
+
+I will use the proxy API from mozilla.
+Use the proxy API to proxy web requests. 
+You can use the proxy.onRequest event listener to intercept web requests, and return an object that describes whether and how to proxy them.
+

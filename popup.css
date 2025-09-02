@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 250px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#enable,
+#accept-default,
+#save-config {
+  background-color: #4caf50;
+  color: white;
+}
+
+#disable {
+  background-color: #f44336;
+  color: white;
+}
+
+#configure,
+#reconfigure,
+#back-to-step1 {
+  background-color: #2196f3;
+  color: white;
+}
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
